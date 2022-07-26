@@ -1,16 +1,15 @@
 import './app.css';
-import Sidebar from './components/sidebar';
+import { Sidebar } from './components/sidebar';
+import { Canvas } from './components/canvas';
 
-function App()
+const SidebarWidth = 240; // px
+
+export const App = () =>
 {
     return (
         <div className="App">
-            <Sidebar />
-            <div>
-                hello!
-            </div>
+            <Sidebar sidebarWidth={SidebarWidth} />
+            <Canvas sidebarWidth={SidebarWidth} />
         </div>
     );
-}
-
-export default App;
+};
